@@ -35,7 +35,14 @@ if($_POST) {
     echo "$attempts";
 }
 ?>
-<form action="index.php" method="post">
+<form action="index.php 
+<?php 
+    if($attempts == 10) {
+        header (Location: result.php);
+    } else {
+        header (Location: index.php);
+    }
+?>" method="post">
     <input type="radio" name="radio" id="rad1" value="0">
     <label for="rad1">Орел</label>
     <input type="radio" name="radio" id="rad2" value="1">
