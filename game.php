@@ -11,15 +11,15 @@
     
     
     $attempts = $_POST["attempts"];
-    echo $attempts;
     $win = $_POST["wins"];
     $level = $_POST["level"];
-
+    
     if(isset($_POST["radio"])) {
         $coin = $_POST["radio"];
         $random = rand(0, 1); //Підк монети
-        $_POST['attempts'] = ++$attempts;
-
+        $attempts++;
+        
+        echo $attempts;
         echo $level;
 
         //Присв сторони
@@ -91,9 +91,9 @@
 <form action=" 
 <?php 
     if($attempts < 10) {
-        echo "result.php";
-    } else {
         echo "game.php";
+    } else {
+        echo "result.php";
     }
 ?>" method="post">
         <input type='hidden' name='attempts' value='<?php echo($attempts);?>'>
