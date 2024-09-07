@@ -11,6 +11,13 @@
 </head>
 <body>
     <h1>Спроби закінчилися!!!</h1>
-    <a href="result.php">Спробувати удачу ще раз</a>
+    <a href="index.php">Спробувати удачу ще раз</a>
 </body>
+<?php
+    $win = $_POST["win"];
+
+    $lose = 10-$win;
+    echo "<p>Програшів: $lose</p>";
+    echo "<p>Виграшів: $win</p>";
+?>
 </html>

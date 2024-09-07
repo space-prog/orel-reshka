@@ -13,9 +13,15 @@
     } else {
         $attempts = 0;
     }
+    if(isset($_POST["win"])) {
+        $win = $_POST["win"];
+    } else {
+        $win = 0;
+    }
 if($_POST) {
     $random = rand(0, 1); //Підк монети
     $attempts++;
+    
     //Присв сторони
     if($random == 0) {
         $side = 'Орел';
@@ -28,6 +34,7 @@ if($_POST) {
     if($random == $coin) {
         echo "<p>Виграш</p>";
         echo "Випала сторона $side";
+        $win++;
     } else {
         echo "<p>програли</p>";  
         echo "Випала сторона $side";
@@ -35,12 +42,12 @@ if($_POST) {
     echo "$attempts";
 }
 ?>
-<form action="index.php 
+<form action=" 
 <?php 
     if($attempts == 10) {
-        header (Location: result.php);
+        echo "result.php";
     } else {
-        header (Location: index.php);
+        echo "index.php";
     }
 ?>" method="post">
     <input type="radio" name="radio" id="rad1" value="0">
@@ -48,6 +55,7 @@ if($_POST) {
     <input type="radio" name="radio" id="rad2" value="1">
     <label for="rad2">Решка</label>
     <input type="hidden" name="attempts" value="<?php echo($attempts);?>">
+    <input type="hidden" name="win" value="<?php echo($win);?>">
     <button type="submit">submit</button>
 </form>
 </body>
