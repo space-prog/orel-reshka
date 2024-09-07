@@ -14,7 +14,7 @@
     <a href="index.php">Спробувати удачу ще раз</a>
 </body>
 <?php
-    $win = $_POST["win"];
+    $win = $_POST["wins"];
 
     $lose = 10-$win;
     echo "<p>Програшів: $lose</p>";
