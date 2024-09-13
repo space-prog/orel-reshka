@@ -115,7 +115,8 @@
             ?>
             </form>
             <form action="index.php" method="post">
-                <input type="hidden" name="wins" value="<?php echo($win);?>">
+                <input type="hidden" name="wins1" value="<?php echo($win);?>">
+                <input type="submit" value="">
             </form>
             </div>
         </div>

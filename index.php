@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php 
+        $win = $_POST["wins1"]
+    ?>
+
     <form action="game.php" method="post">
         <input type="radio" name="level" id="easy" value="easy" >
         <label for="easy">Легкий</label>
