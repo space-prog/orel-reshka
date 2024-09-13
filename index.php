@@ -7,9 +7,13 @@
 </head>
 <body>
     <form action="game.php" method="post">
-        <input type="radio" name="level" id="easy" value="easy">
+        <input type="radio" name="level" id="easy" value="easy" >
         <label for="easy">Легкий</label>
-        <input type="radio" name="level" id="medium" value="medium">
+        <input type="radio" name="level" id="medium" value="medium"<?php  if($win < 5) {
+            echo "disabled";
+        } else {
+            echo "";
+        }  ?>>
         <label for="medium">Середній</label>
         <input type="radio" name="level" id="hard" value="hard">
         <label for="hard">Важкий</label>
