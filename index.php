@@ -7,19 +7,31 @@
 </head>
 <body>
     <?php 
-        $win = $_POST["wins1"]
+        
+        if(isset($_POST["globalWins"])) {
+            $globalWin = $_POST["globalWins"];
+        } else {
+            $globalWin = 0;
+        }
     ?>
 
     <form action="game.php" method="post">
         <input type="radio" name="level" id="easy" value="easy" >
         <label for="easy">Легкий</label>
-        <input type="radio" name="level" id="medium" value="medium"<?php  if($win < 5) {
-            echo "disabled";
-        } else {
-            echo "";
-        }  ?>>
+        <input type="radio" name="level" id="medium" value="medium"
+        <?php
+            if($globalWin == 0) {
+                echo "disabled";
+            }
+        ?>>
+        
         <label for="medium">Середній</label>
-        <input type="radio" name="level" id="hard" value="hard">
+        <input type="radio" name="level" id="hard" value="hard" 
+        <?php 
+            if($globalWin !=2) {
+                echo "disabled";
+            }
+        ?>>
         <label for="hard">Важкий</label>
         <input type="hidden" name="attempts" value="0">
         <input type="hidden" name="wins" value="0">
