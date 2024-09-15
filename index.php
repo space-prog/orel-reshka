@@ -13,6 +13,8 @@
         } else {
             $globalWin = 0;
         }
+
+        echo $globalWin;
     ?>
 
     <form action="game.php" method="post">
@@ -35,6 +37,7 @@
         <label for="hard">Важкий</label>
         <input type="hidden" name="attempts" value="0">
         <input type="hidden" name="wins" value="0">
+        <input type="hidden" name="globalWins" value="<?php echo($globalWin)?>">
         <button type="submit">Грати</button>
     </form>
 </body>

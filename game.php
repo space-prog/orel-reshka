@@ -19,6 +19,7 @@
             $attempts = $_POST["attempts"];
             $win = $_POST["wins"];
             $level = $_POST["level"];
+            $globalWin = $_POST["globalWins"];
             
             if(isset($_POST["radio"])) {
                 $coin = $_POST["radio"];
@@ -104,6 +105,7 @@
             <input type='hidden' name='attempts' value='<?php echo($attempts);?>'>
             <input type='hidden' name='wins' value='<?php echo($win);?>'>
             <input type='hidden' name='level' value='<?php echo($level);?>'>
+            <input type="hidden" name="globalWins" value="<?php echo($globalWin)?>">
             <?php 
                 if($attempts < 10) {
             echo "
