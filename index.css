@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Arturo';
+    src: url('Fonts/Arturo-Regular.woff2') format('woff2'),
+        url('Fonts/Arturo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+label {
+    font-family: 'Arturo';
+    font-size: 16px;
+}
+
+.custom-radio {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 2px solid #9797a0;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: text-top;
+    transition: all .3s ease;
+}
+
+.custom-radio::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #3e6aff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .3s ease;
+}
+
+.real-radio:checked+.custom-radio::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.real-radio:checked+.custom-radio {
+    border-color: #3e6aff;
+}
+
+.real-radio {
+    appearance: none;
+}
+
+.real-radio:disabled + .custom-radio {
+    border-color: #c7c7ce;
+}
+

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,23 +19,31 @@
     ?>
 
     <form action="game.php" method="post">
-        <input type="radio" name="level" id="easy" value="easy" >
-        <label for="easy">Легкий</label>
-        <input type="radio" name="level" id="medium" value="medium"
-        <?php
-            if($globalWin == 0) {
-                echo "disabled";
-            }
-        ?>>
-        
-        <label for="medium">Середній</label>
-        <input type="radio" name="level" id="hard" value="hard" 
-        <?php 
-            if($globalWin !=2) {
-                echo "disabled";
-            }
-        ?>>
-        <label for="hard">Важкий</label>
+        <label>
+            <input type="radio" name="level" id="easy" value="easy" class="real-radio">
+            <span class="custom-radio"></span>
+            Легкий
+        </label>
+        <label>
+            <input type="radio" name="level" id="medium" value="medium" class="real-radio"
+            <?php
+                if($globalWin == 0) {
+                    echo "disabled";
+                }
+            ?>>
+            <span class="custom-radio"></span>
+            Середній
+        </label>
+        <label class="test">
+            <input type="radio" name="level" id="hard" value="hard" class="real-radio"
+            <?php 
+                if($globalWin !=2) {
+                    echo "disabled";
+                }
+            ?>>
+            <span class="custom-radio"></span>
+            Важкий
+        </label>
         <input type="hidden" name="attempts" value="0">
         <input type="hidden" name="wins" value="0">
         <input type="hidden" name="globalWins" value="<?php echo($globalWin)?>">
