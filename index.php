@@ -15,14 +15,13 @@
             $globalWin = 0;
         }
 
-        echo $globalWin;
     ?>
 
     <form action="game.php" method="post">
         <label>
             <input type="radio" name="level" id="easy" value="easy" class="real-radio">
             <span class="custom-radio"></span>
-            Легкий
+            <span class="name">Легкий</span>
         </label>
         <label>
             <input type="radio" name="level" id="medium" value="medium" class="real-radio"
@@ -47,7 +46,7 @@
         <input type="hidden" name="attempts" value="0">
         <input type="hidden" name="wins" value="0">
         <input type="hidden" name="globalWins" value="<?php echo($globalWin)?>">
-        <button type="submit">Грати</button>
+        <button type="submit" class="button">Грати</button>
     </form>
 </body>
 </html>

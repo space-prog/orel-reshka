@@ -7,9 +7,7 @@
     <title>Спроби закінчилися</title>
 </head>
 <body>
-    <h1>Спроби закінчилися!!!</h1>
-    <a href="index.php">Спробувати удачу ще раз</a>
-
+    <h1>Спроби закінчилися!!!</h1> 
 <?php
     $win = $_POST["wins"];
     $globalWins = $_POST["globalWins"];

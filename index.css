@@ -7,31 +7,43 @@
     font-display: swap;
 }
 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    background: url(money.jpg) center/cover;
+}
+
 label {
     font-family: 'Arturo';
     font-size: 16px;
+    color: #fff;
 }
 
 .custom-radio {
     display: inline-block;
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: 60px;
+    height: 100px;
     background-color: #fff;
     border: 2px solid #9797a0;
-    border-radius: 50%;
     margin-right: 5px;
-    vertical-align: text-top;
+    vertical-align: middle;
     transition: all .3s ease;
 }
 
 .custom-radio::before {
     content: "";
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #3e6aff;
-    border-radius: 50%;
+    width: 50px;
+    height: 90px;
+    background-color: #7cc56a;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -44,7 +56,7 @@ label {
 }
 
 .real-radio:checked+.custom-radio {
-    border-color: #3e6aff;
+    border-color: #7cc56a;
 }
 
 .real-radio {
@@ -52,6 +64,20 @@ label {
 }
 
 .real-radio:disabled + .custom-radio {
-    border-color: #c7c7ce;
+    border-color: #e94637;
 }
 
+.button{
+    padding: 10px 35px;
+    background-color: #73c96a;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background-color: #487d42;
+}

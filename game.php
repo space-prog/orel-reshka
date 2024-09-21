@@ -79,12 +79,12 @@
                         }
                         if($random == $coin) {
                             echo "<p>Виграш</p>";
-                            echo "Випала сторона $side";
+                            echo "<p>Випала сторона $side</p>";
                             $win++;
                         }
                     } else {
                         echo "<p>програли</p>";
-                        echo "Випала сторона $side";
+                        echo "<p>Випала сторона $side</p>";
                     }
                 }
             
