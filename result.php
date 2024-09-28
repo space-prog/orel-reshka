@@ -18,7 +18,7 @@
     echo "<p>Виграшів: $win</p>";
 
     if($win >= 5) {
-        echo "Ви перемогли на рівні $level, Вам відкрито наступний рівень";
+        echo "<p>Ви перемогли на рівні $level, Вам відкрито наступний рівень</p>";
         if($level == "easy" && $globalWins == 0 || $level == "medium" && $globalWins == 1) {
             $globalWins++;
         }
@@ -28,7 +28,7 @@
     <form action="index.php" method="post">
         <input type="hidden" name="globalWins" value="<?php echo($globalWins);?>">
         <input type="hidden" name="level" value="<?php echo($level);?>">
-        <button type="submit">Грати далі</button>
+        <p><button type="submit">Грати далі</button></p>
     </form>
 </body>
 </html>
