@@ -63,13 +63,13 @@
                 } else if($level == "medium") {
                     if($random == $coin) {
                         echo "<p>Виграш</p>";
-                        echo "Випала сторона $side";
+                        echo "<p>Випала сторона $side</p>";
                         $win++;
                     } else {
                         echo "<p>програли</p>";
-                        echo "Випала сторона $side";
+                        echo "<p>Випала сторона $side</p>";
                     }
-                } else {
+                } else if($level == "hard"){
                     if($random == $coin) {
                         $random = rand(0, 1); //Підк монети
                         if($random == 0) {
